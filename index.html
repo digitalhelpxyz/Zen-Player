@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,15 +6,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zen Player - All Format Video Player | 4K HD Media Player for Android</title>
+<title>Zen Player - All Format Video Player | 4K HD Media Player</title>
 
-<meta name="description" content="Zen Player is a powerful all format video player for Android supporting MKV, MP4, AVI, 4K playback, subtitle support, private folder, background play, playlists and more.">
+<meta name="description" content="Zen Player is a powerful all format video player for Android supporting MKV, MP4, AVI, 4K playback, subtitle support, private folder, background play and playlist manager.">
 
-<meta name="keywords" content="video player all format, android video player, mkv player android, 4k video player, hd media player android, zen player">
+<meta name="keywords" content="video player all format, android video player, mkv player android, 4k video player, hd video player android">
 
-<meta property="og:title" content="Zen Player - All Format Video Player">
-<meta property="og:description" content="Powerful 4K video player for Android with subtitle support, background play and private folder.">
-<meta property="og:type" content="website">
+<link rel="icon" href="zen-Player-logo.jpg">
+
+<!-- Google SEO App Schema -->
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "MobileApplication",
+ "name": "Zen Player",
+ "operatingSystem": "Android",
+ "applicationCategory": "MultimediaApplication",
+ "offers": {
+ "@type": "Offer",
+ "price": "0",
+ "priceCurrency": "USD"
+ },
+ "downloadUrl": "https://play.google.com/store/apps/details?id=com.inder.zenplayer"
+}
+</script>
 
 <style>
 
@@ -27,15 +42,46 @@ color:#333;
 line-height:1.6;
 }
 
+/* NAVBAR */
+
+nav{
+background:#111;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:40px;
+border-radius:8px;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+
 header{
 background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
 text-align:center;
-padding:70px 20px;
+padding:80px 20px;
 }
 
 header h1{
-font-size:48px;
+font-size:50px;
 margin-bottom:10px;
 }
 
@@ -47,30 +93,36 @@ opacity:0.9;
 .btn{
 display:inline-block;
 margin-top:25px;
-padding:16px 32px;
+padding:16px 34px;
 background:#00c853;
 color:white;
 font-weight:bold;
 border-radius:8px;
 text-decoration:none;
 font-size:18px;
+transition:0.3s;
 }
 
 .btn:hover{
+transform:scale(1.05);
 background:#00a844;
 }
+
+/* SECTIONS */
 
 .container{
 max-width:1200px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .section-title{
 text-align:center;
 margin-bottom:40px;
-font-size:32px;
+font-size:34px;
 }
+
+/* FEATURES */
 
 .features{
 display:grid;
@@ -85,21 +137,22 @@ border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.feature h3{
-margin-top:0;
-}
+/* SCREENSHOTS SLIDER */
 
-.screenshots{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+.slider{
+display:flex;
+overflow-x:auto;
 gap:20px;
+scroll-behavior:smooth;
 }
 
-.screenshots img{
-width:100%;
+.slider img{
+height:420px;
 border-radius:12px;
-box-shadow:0 4px 12px rgba(0,0,0,0.25);
+box-shadow:0 4px 12px rgba(0,0,0,0.3);
 }
+
+/* DOWNLOAD SECTION */
 
 .download{
 text-align:center;
@@ -110,8 +163,24 @@ padding:80px 20px;
 
 .download h2{
 font-size:36px;
-margin-bottom:20px;
 }
+
+/* FAQ */
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+margin-bottom:20px;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
 
 footer{
 background:#000;
@@ -149,115 +218,85 @@ background:#1e1e1e;
 
 <button class="darkmode" onclick="toggleDark()">Dark</button>
 
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+<img src="zen-Player-logo.jpg">
+<strong>Zen Player</strong>
+</div>
+
+<div>
+<a href="#features">Features</a>
+<a href="#screenshots">Screenshots</a>
+<a href="#faq">FAQ</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
 <header>
 
 <h1>Zen Player</h1>
 
-<p>All Format HD Video & Audio Player for Android</p>
+<p>Powerful All Format Video Player for Android</p>
 
 <a class="btn"
 href="https://play.google.com/store/apps/details?id=com.inder.zenplayer">
-Download on Google Play
+Install from Google Play
 </a>
 
 </header>
 
 
-<div class="container">
+<!-- FEATURES -->
 
-<h2 class="section-title">Powerful Android Media Player</h2>
+<div class="container" id="features">
 
-<p style="text-align:center;max-width:800px;margin:auto;font-size:18px">
-
-Zen Player is a professional video player designed to play almost every video and audio format smoothly on Android devices.
-Enjoy powerful playback features including **4K video support, subtitle customization, playlists, private folders and floating video player**.
-
-</p>
-
-</div>
-
-
-<div class="container">
-
-<h2 class="section-title">KEY FEATURES</h2>
+<h2 class="section-title">Key Features</h2>
 
 <div class="features">
 
-<div class="feature">
-<h3>All Format Video Player</h3>
-<p>Supports MKV, MP4, MOV, FLV, AVI, 3GP, RMVB, M4V, WMV, TS and many more.</p>
-</div>
+<div class="feature"><h3>All Format Support</h3><p>Supports MKV, MP4, MOV, FLV, AVI, 3GP, RMVB and many more formats.</p></div>
 
-<div class="feature">
-<h3>4K Ultra HD Playback</h3>
-<p>Play HD and 4K videos smoothly using powerful decoding.</p>
-</div>
+<div class="feature"><h3>4K Ultra HD</h3><p>Play HD and Ultra HD videos smoothly.</p></div>
 
-<div class="feature">
-<h3>Subtitle Support</h3>
-<p>Download subtitles and customize subtitle style easily.</p>
-</div>
+<div class="feature"><h3>Subtitle Support</h3><p>Download subtitles and customize subtitle styles.</p></div>
 
-<div class="feature">
-<h3>Private Folder</h3>
-<p>Secure and hide personal videos in private folder.</p>
-</div>
+<div class="feature"><h3>Private Folder</h3><p>Protect personal videos with secure private folder.</p></div>
 
-<div class="feature">
-<h3>Floating Video Player</h3>
-<p>Watch videos in pop-up window while using other apps.</p>
-</div>
+<div class="feature"><h3>Floating Video Player</h3><p>Watch videos in pop-up window while multitasking.</p></div>
 
-<div class="feature">
-<h3>Hardware Acceleration</h3>
-<p>Optimized playback performance for smooth HD videos.</p>
-</div>
+<div class="feature"><h3>Hardware Acceleration</h3><p>Optimized video decoding for smoother playback.</p></div>
 
-<div class="feature">
-<h3>Background Play</h3>
-<p>Play videos in background while multitasking.</p>
-</div>
+<div class="feature"><h3>Background Play</h3><p>Play videos while using other apps.</p></div>
 
-<div class="feature">
-<h3>Powerful Equalizer</h3>
-<p>Enjoy high quality audio with advanced equalizer.</p>
-</div>
+<div class="feature"><h3>Equalizer</h3><p>Advanced equalizer for better audio experience.</p></div>
 
-<div class="feature">
-<h3>Advanced Playback Controls</h3>
-<p>Playback speed, mirror, AB repeat, sleep timer and night mode.</p>
-</div>
+<div class="feature"><h3>Gesture Control</h3><p>Adjust brightness, volume and seek with gestures.</p></div>
 
-<div class="feature">
-<h3>Gesture Control</h3>
-<p>Adjust brightness, volume and seek progress using gestures.</p>
-</div>
+<div class="feature"><h3>Playlist Manager</h3><p>Create playlists for your favorite videos.</p></div>
 
-<div class="feature">
-<h3>Playlist Manager</h3>
-<p>Create playlists to manage your favorite videos easily.</p>
-</div>
+<div class="feature"><h3>Video Manager</h3><p>Scan and manage video files from device and SD card.</p></div>
 
-<div class="feature">
-<h3>Video Manager</h3>
-<p>Scan and manage video files from device storage and SD card.</p>
-</div>
-
-<div class="feature">
-<h3>WhatsApp Status Saver</h3>
-<p>Save and manage WhatsApp status videos easily.</p>
-</div>
+<div class="feature"><h3>WhatsApp Status Saver</h3><p>Save and manage WhatsApp status videos.</p></div>
 
 </div>
 
 </div>
 
 
-<div class="container">
+<!-- SCREENSHOTS -->
+
+<div class="container" id="screenshots">
 
 <h2 class="section-title">App Screenshots</h2>
 
-<div class="screenshots">
+<div class="slider">
 
 <img src="Zenplayerscreenshot1.jpg">
 <img src="Zenplayerscreenshot2.jpg">
@@ -277,11 +316,13 @@ Enjoy powerful playback features including **4K video support, subtitle customiz
 </div>
 
 
+<!-- DOWNLOAD -->
+
 <div class="download">
 
 <h2>Download Zen Player Now</h2>
 
-<p>Enjoy powerful video playback with the best HD video player for Android.</p>
+<p>Experience powerful HD video playback on Android.</p>
 
 <a class="btn"
 href="https://play.google.com/store/apps/details?id=com.inder.zenplayer">
@@ -291,24 +332,50 @@ Get it on Google Play
 </div>
 
 
+<!-- FAQ -->
+
+<div class="container" id="faq">
+
+<h2 class="section-title">Frequently Asked Questions</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>Does Zen Player support all video formats?</h3>
+<p>Yes, Zen Player supports most popular video formats including MKV, MP4, AVI, FLV, MOV and more.</p>
+</div>
+
+<div class="faq-item">
+<h3>Can I play videos in background?</h3>
+<p>Yes, background playback allows you to listen to videos while using other apps.</p>
+</div>
+
+<div class="faq-item">
+<h3>Is Zen Player free?</h3>
+<p>Yes, Zen Player is free to download and use on Android devices.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SUPPORT -->
+
 <div class="container">
 
 <h2 class="section-title">Support</h2>
 
 <p style="text-align:center;font-size:18px">
-For support, suggestions or feedback contact us at
+For help or feedback contact us at
 </p>
 
 <p style="text-align:center;font-size:20px;font-weight:bold">
 digitalhelpxyz@gmail.com
 </p>
 
-<h2 class="section-title">Privacy Policy</h2>
-
 <p style="text-align:center">
-<a href="https://digitalhelpxyz.github.io/Zen-Player/privacy-policy.html">
-View Privacy Policy
-</a>
+<a href="privacy-policy.html">Privacy Policy</a>
 </p>
 
 </div>
@@ -316,10 +383,9 @@ View Privacy Policy
 
 <footer>
 
-<p>© 2026 Zen Player | Android Media Player</p>
+<p>© 2026 Zen Player</p>
 
 </footer>
-
 
 <script>
 
@@ -331,4 +397,3 @@ document.body.classList.toggle("dark");
 
 </body>
 </html>
-```
